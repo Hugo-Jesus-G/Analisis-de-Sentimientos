@@ -4,15 +4,13 @@ from conteo import Conteos
 from extraerColumnasContenido import extraccion
 from limpieza import limpiarTexto
 from crearGrafica import grafica
+import os
 
-
-
-
-
+ruta_actual = os.getcwd()
+ruta=ruta_actual+'\\datosC\\General.xlsx'
 
 diccc=diccC()
         
-ruta='~\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\Analisis-de-Sentimientos\\datosC\\General.xlsx'
 
 diccc.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccc.getdiccionarioParaConteoPositivos(),diccc.getPalabrasPositivas()))
 

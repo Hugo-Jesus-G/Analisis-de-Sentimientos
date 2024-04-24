@@ -4,14 +4,14 @@ from diccionariosX import diccX
 from conteo import Conteos
 from extraerColumnasContenido import extraccion
 from limpieza import limpiarTexto
+import os
 
-
-
-
+ruta_actual = os.getcwd()
+ruta=ruta_actual+'\\datosx\\General.xlsx'
 
 diccx=diccX()
         
-ruta='~\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\Analisis-de-Sentimientos\\datosC\\General.xlsx'
+
 
 #conteo de palabras positivas
 diccx.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccx.getdiccionarioParaConteoPositivos(),diccx.getPalabrasPositivas()))
