@@ -11,8 +11,7 @@ from limpieza import limpiarTexto
 
 diccx=diccX()
         
-ruta='C:\\Users\\Hugog\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\datosX\\General.xlsx'
-
+ruta='~\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\Analisis-de-Sentimientos\\datosC\\General.xlsx'
 
 #conteo de palabras positivas
 diccx.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccx.getdiccionarioParaConteoPositivos(),diccx.getPalabrasPositivas()))

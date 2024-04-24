@@ -12,7 +12,7 @@ from crearGrafica import grafica
 
 diccc=diccC()
         
-ruta='C:\\Users\\Hugog\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\datosC\\General.xlsx'
+ruta='~\\OneDrive\\Documentos\\semestres\\SeptimoSemestre\\mineriaDatos\\Proyecto\\Analisis-de-Sentimientos\\datosC\\General.xlsx'
 
 diccc.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccc.getdiccionarioParaConteoPositivos(),diccc.getPalabrasPositivas()))
 
