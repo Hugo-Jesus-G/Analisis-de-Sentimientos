@@ -1,5 +1,5 @@
 from crearGrafica import grafica
-from main import Main
+from AnalisisDePalabras import Analisis
 from diccionariosX import diccX
 from conteo import Conteos
 from extraerColumnasContenido import extraccion
@@ -14,7 +14,7 @@ diccx=diccX()
 
 
 #conteo de palabras positivas
-diccx.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccx.getdiccionarioParaConteoPositivos(),diccx.getPalabrasPositivas()))
+diccx.setdiccionarioParaConteoPositivos(Analisis.analisisPalabras(ruta,diccx.getdiccionarioParaConteoPositivos(),diccx.getPalabrasPositivas()))
 
 print(f"\n-----------------Conteo de Palabras Positivas---------------\n \n{diccx.getdiccionarioParaConteoPositivos()}")
 
@@ -29,7 +29,7 @@ print(f"\n-----------------Conteo de Palabras Positivas---------------\n \n{dicc
 
 
 
-diccx.setdiccionarioParaConteoNegativos(Main.analisisPalabras(ruta,diccx.getdiccionarioParaConteoNegativos(),diccx.getPalabrasNegativas()))
+diccx.setdiccionarioParaConteoNegativos(Analisis.analisisPalabras(ruta,diccx.getdiccionarioParaConteoNegativos(),diccx.getPalabrasNegativas()))
 
 print(f"\n-----------------Conteo de Palabras Negativas---------------\n \n{diccx.getdiccionarioParaConteoNegativos()}")
 

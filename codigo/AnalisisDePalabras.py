@@ -1,10 +1,9 @@
-from diccionariosX import diccX
 from conteo import Conteos
 from extraerColumnasContenido import extraccion
 from limpieza import limpiarTexto
 
 
-class Main:
+class Analisis:
     
     
     def analisisPalabras(ruta,diccionario,diccionarioSentimientos):

@@ -1,4 +1,4 @@
-from main import Main
+from AnalisisDePalabras import Analisis
 from diccionariosC import diccC
 from conteo import Conteos
 from extraerColumnasContenido import extraccion
@@ -12,7 +12,7 @@ ruta=ruta_actual+'\\datosC\\General.xlsx'
 diccc=diccC()
         
 
-diccc.setdiccionarioParaConteoPositivos(Main.analisisPalabras(ruta,diccc.getdiccionarioParaConteoPositivos(),diccc.getPalabrasPositivas()))
+diccc.setdiccionarioParaConteoPositivos(Analisis.analisisPalabras(ruta,diccc.getdiccionarioParaConteoPositivos(),diccc.getPalabrasPositivas()))
 
 print(f"\n-----------------Conteo de Palabras Positivas---------------\n \n{diccc.getdiccionarioParaConteoPositivos()}")
 
@@ -28,7 +28,7 @@ print(f"\n-----------------Conteo de Palabras Positivas---------------\n \n{dicc
 
 
 
-diccc.setdiccionarioParaConteoNegativos(Main.analisisPalabras(ruta,diccc.getdiccionarioParaConteoNegativos(),diccc.getPalabrasNegativas()))
+diccc.setdiccionarioParaConteoNegativos(Analisis.analisisPalabras(ruta,diccc.getdiccionarioParaConteoNegativos(),diccc.getPalabrasNegativas()))
 
 print(f"\n-----------------Conteo de Palabras Negativas---------------\n \n{diccc.getdiccionarioParaConteoNegativos()}")
 
