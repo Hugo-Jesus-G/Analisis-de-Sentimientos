@@ -3,36 +3,33 @@
 class diccC:
     
     def __init__(self):
-        def listaMinusculas(lista):
-            listaM=[]
-            for i in lista:
-                listaM.append(i.lower())
         
-            return listaM
-        
-        self._palabrasPositivas=listaMinusculas(["mejor","presidenta","Claudia","sheinbaum","morena","arriba","transformado","viva",
+        self._palabrasPositivas=["mejor","presidenta","Claudia","sheinbaum","morena","arriba","transformado","viva",
                     "contigo","vamos","primera","honor","ganar","carismática","bien","patrona","soporten",
-                    "amlo","futura","determinado","masivo","voto","best","mexico"])
-        self._palabrasNegativas=listaMinusculas(["acarreados","malo","descuidara","cansado","destrucción","mafia","nunca","bad"])
+                    "amlo","futura","determinado","masivo","voto","best","mexico"]
+        
+        self._palabrasNegativas=["acarreados","malo","descuidara","cansado","destrucción","mafia","nunca","bad"]
         
         
-        self._otroPartido=listaMinusculas(["Xóchitl"])
+        self._otroPartido=["Xóchitl"]
         
         self._diccionarioParaConteoPositivos=dict()
         self._diccionarioParaConteoNegativos=dict()
     
     
+    def listaMinusculas(self,lista):
+        return {palabra.lower() for palabra in lista}
 
     def getPalabrasPositivas(self):
-        return self._palabrasPositivas
+        return self.listaMinusculas(self._palabrasPositivas)
     
     def getPalabrasNegativas(self):
-        return self._palabrasNegativas 
+        return self.listaMinusculas(self._palabrasNegativas)
     
     def getPalabrasOtroPartido(self):
         return self._otroPartido 
 
-        #alamcenamineto de conteo positivos
+     #alamcenamineto de conteo positivos
 
     def getdiccionarioParaConteoPositivos(self):
         return self._diccionarioParaConteoPositivos
