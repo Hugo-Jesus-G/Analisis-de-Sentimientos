@@ -31,7 +31,26 @@ class grafica:
         plt.pie(valor,labels=clave,autopct='%1.1f%%')
         plt.show()
         
+
+    def crearGraficosCircularesComparacion(candidato1, candidato2):
+    
+        fig, axs = plt.subplots(1, 2)
         
+        # Primer gráfico circular
+        axs[0].pie(candidato1.values(), labels=candidato1.keys(), autopct='%1.1f%%')
+        axs[0].set_title('Xochitl')
+        
+        # Segundo gráfico circular
+        axs[1].pie(candidato2.values(), labels=candidato2.keys(), autopct='%1.1f%%')
+        axs[1].set_title('Claudia')
+
+        plt.show()
+        
+        
+        def crearGraficoCircular(clave,valor):
+            plt.pie(valor,labels=clave,autopct='%1.1f%%')
+            plt.show()
+            
         
 
 
