@@ -13,10 +13,31 @@ class Conteos:
                         diccionario[sentimiento]+=1
     
         return diccionario
+    
+    
+    
+    
+    def numeroPalabras(dicc):
+        
+        return sum(dicc.values())
+        
+        
+        
+    def numeroTotalPalabras(dicc1,dicc2):
+        return dicc1+dicc2
+    
+    
+    def porcentaje(dicc1,dicc2):
+        return dicc1/(dicc1+dicc2)
+        
         
         
     
-   # def ConcatenacionSentimiento(diccionario,sentimiento):
+        
+        
+        
+        
+    
         
         
         

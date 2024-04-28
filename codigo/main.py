@@ -7,44 +7,52 @@ from diccionariosX import diccX
 from limpieza import limpiarTexto
 from extraerColumnasContenido import extraccion
 from exportarExel import exportar
-from AnalisisDePalabras import Analisis
 from clasificador import clasificacion
 
 
 print("\n---------------------Xochitl------------")
 
+rutaX=os.getcwd()+'\\datosx\\General.xlsx'
 diccionarioX=diccX()
 
+x=mainX(rutaX,diccionarioX)
+x.limpiar()
+porcentajePalabrasX=x.palabrasPorcentajes()
 
-rutaX=os.getcwd()+'\\datosx\\General.xlsx'
-rutaArchivo=os.getcwd()+'\\datosx\\salidaAnalisisX.xlsx'
-candidatoX=mainX(rutaX,diccionarioX)
+rutaGuardarX=os.getcwd()+'\\datosx\\analisisX.xlsx'
 
-porcentajePalabrasX=candidatoX.porcentajePalabras()
+porcentajeComentariosX=x.clasificacionYExportacion(rutaGuardarX)
 
-porcentajeComentariosX=candidatoX.porcentajeComnetarios(rutaArchivo)
-
-print(porcentajeComentariosX)
-
+print("PALABRAS "+str(porcentajePalabrasX))
+print("COMENTARIOS "+str(porcentajeComentariosX))
 
 
 
 #claudia
 
 print("\n---------------------Claudia------------")
+rutaC=os.getcwd()+'\\datosC\\General.xlsx'
 diccionarioC=diccC()
 
+c=mainC(rutaC,diccionarioC)
+c.limpiar()
+porcentajePalabrasC=c.palabrasPorcentajes()
 
-rutaC=os.getcwd()+'\\datosC\\General.xlsx'
-rutaArchivo=os.getcwd()+'\\datosC\\salidaAnalisisC.xlsx'
-candidatoC=mainC(rutaC,diccionarioC)
+rutaGuardarC=os.getcwd()+'\\datosC\\analisisC.xlsx'
 
-porcentajePalabrasC=candidatoC.porcentajePalabras()
+porcentajeComentariosC=c.clasificacionYExportacion(rutaGuardarC)
 
-porcentajeComentariosC=candidatoC.porcentajeComentarios(rutaArchivo)
+print("PALABRAS "+str(porcentajePalabrasC))
+print("COMENTARIOS "+str(porcentajeComentariosC))
 
-print(porcentajeComentariosC)
+
+
+
+
+#graficas
 #el primero parametro es de claudia y el segundo de xochitl
-grafica.crearGraficosCircularesComparacion(porcentajeComentariosC,porcentajeComentariosX)
+grafica.crearGraficosCircularesComparacion(porcentajeComentariosC,porcentajeComentariosX,"Comentarios")
+#grafica.crearGraficosCircularesComparacion(porcentajePalabrasC,porcentajePalabrasX,"Palabras")
+
 
 

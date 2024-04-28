@@ -3,32 +3,22 @@ from limpieza import limpiarTexto
 
 
 class clasificacion:
-    def __init__(self,ruta) :
-        self.ruta=ruta
+    def __init__(self) :
         self.coincidencias = []
-        self.origenCoincidencias = []
-        self.listaLimpia = []
+        self.categoria = []
+       
         
     
     def getCoincidencias(self):
         return self.coincidencias
 
-    def getOrigenCoincidencias(self):
-        return self.origenCoincidencias
-    def getListaLimpia(self):
-        return self.listaLimpia
+    def getCategoria(self):
+        return self.categoria
     
     
-    def clasificar(self,diccionarioPositivo,diccionarioNegativo):
-        lista=extraccion.extraccionColumnaComnetarios(self.ruta)
-        self.listaLimpia=limpiarTexto.limpiar(lista)
-        
-        coincidencias = []
-        origenCoincidencias = []
-
-
-        for comentario in self.listaLimpia:
-             if comentario:
+    def clasificar(self,listaLimpia,diccionarioPositivo,diccionarioNegativo):
+            for comentario in listaLimpia:
+             
                 coincidenciasComentario = [palabra for palabra in diccionarioNegativo if palabra.lower() in comentario.lower()] + \
                                         [palabra for palabra in diccionarioPositivo if palabra.lower() in comentario.lower()]
                 self.coincidencias.append(coincidenciasComentario)
@@ -46,26 +36,29 @@ class clasificacion:
 
                                 
                         
-                self.origenCoincidencias.append(clasificacion)
+                self.categoria.append(clasificacion)
+        
+        
+        
 
        
             
             
     def numeroPorCategoria(self):
         conteo = {
-        "positivo": sum(lista.count("Positivo") for lista in self.origenCoincidencias),
-        "negativo": sum(lista.count("Negativo") for lista in self.origenCoincidencias),
-        "neutral": sum(lista.count("Neutral") for lista in self.origenCoincidencias)
+        "Positivo": sum(lista.count("Positivo") for lista in self.categoria),
+        "Negativo": sum(lista.count("Negativo") for lista in self.categoria),
+        "Neutral": sum(lista.count("Neutral") for lista in self.categoria)
         }
         return conteo
     
     def porcentajePorCategoria(self):
         conteo = self.numeroPorCategoria()
-        total_elementos = sum(conteo.values())
+        totalElementos = sum(conteo.values())
         
         porcentajes = {}
         for categoria, cantidad in conteo.items():
-            porcentaje = (cantidad / total_elementos) 
+            porcentaje = (cantidad / totalElementos) 
             porcentajes[categoria] = porcentaje
         
         return porcentajes

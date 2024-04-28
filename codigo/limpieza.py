@@ -41,7 +41,6 @@ class limpiarTexto:
                                 u"\U0001F970"                 #emoji 🥰️
                                 "]+", flags=re.UNICODE)
         
-        # Eliminar emojis de la palabra
         palabraSinEmojis = variantes.sub(r'', palabra)
         
         return palabraSinEmojis
