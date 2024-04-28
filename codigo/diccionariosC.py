@@ -24,7 +24,7 @@ class diccC:
         return self.listaMinusculas(self._palabrasPositivas)
     
     def getPalabrasNegativas(self):
-        return self.listaMinusculas(self._palabrasNegativas)
+        return self.listaMinusculas(self._palabrasNegativas+self._otroPartido)
     
     def getPalabrasOtroPartido(self):
         return self._otroPartido 

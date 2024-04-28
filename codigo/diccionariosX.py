@@ -15,7 +15,7 @@ class diccX:
                    "canuta","miedo","PANISTAS","CASTIGO","soñando","unde","títere","PRI","PAN","desilusióna","retiene"]
         
         
-        self._otroPartido=["morena","amlo","Claudia","Sheinbaum","tren","Maya"]
+        self._otroPartido=["morena","amlo","Claudia","Sheinbaum","tren","Maya","4T"]
         
         self._diccionarioParaConteoPositivos=dict()
         self._diccionarioParaConteoNegativos=dict()
@@ -29,7 +29,7 @@ class diccX:
         return self.listaMinusculas(self._palabrasPositivas)
     
     def getPalabrasNegativas(self):
-        return self.listaMinusculas(self._palabrasNegativas)
+        return self.listaMinusculas(self._palabrasNegativas+self._otroPartido)
     
     def getPalabrasOtroPartido(self):
         return self._otroPartido 
