@@ -12,7 +12,7 @@ class diccX:
                    "Rata","Mentirosa","lacra","Cobarde","LameBotas","Intrigosa","Vergüenza","minimo"
                    "fraude","perder","ingles","hambre","sed","robado","vender","perdiendo","derrota","manipulen",
                    "empresarios","leyendo","discurso","sin","carbura","ardilla","ferrocarril","risa","chistosa",
-                   "canuta","miedo","PANISTAS","CASTIGO","soñando","unde","títere","PRI","PAN","desilusióna"]
+                   "canuta","miedo","PANISTAS","CASTIGO","soñando","unde","títere","PRI","PAN","desilusióna","retiene"]
         
         
         self._otroPartido=["morena","amlo","Claudia","Sheinbaum","tren","Maya"]

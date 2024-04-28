@@ -13,7 +13,13 @@ class Conteos:
                         diccionario[sentimiento]+=1
     
         return diccionario
-            
+        
+        
+    
+   # def ConcatenacionSentimiento(diccionario,sentimiento):
+        
+        
+        
     
   
      

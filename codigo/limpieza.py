@@ -14,7 +14,8 @@ class limpiarTexto:
                     palabrasFiltradas.append(limpiarTexto.eliminarEmojis(palabra))
                 
             cadenaLimpia = " ".join(palabrasFiltradas)
-            listaFiltrada.append(cadenaLimpia.lower())  
+            if cadenaLimpia.strip():
+                listaFiltrada.append(cadenaLimpia.lower())
         
         return listaFiltrada
 

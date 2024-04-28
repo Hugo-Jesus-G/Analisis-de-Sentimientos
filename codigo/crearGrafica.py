@@ -38,11 +38,11 @@ class grafica:
         
         # Primer gráfico circular
         axs[0].pie(candidato1.values(), labels=candidato1.keys(), autopct='%1.1f%%')
-        axs[0].set_title('Xochitl')
+        axs[0].set_title('Claudia')
         
         # Segundo gráfico circular
         axs[1].pie(candidato2.values(), labels=candidato2.keys(), autopct='%1.1f%%')
-        axs[1].set_title('Claudia')
+        axs[1].set_title('Xochitl')
 
         plt.show()
         
