@@ -12,14 +12,14 @@ from clasificador import clasificacion
 
 print("\n---------------------Xochitl------------")
 
-rutaX=os.getcwd()+'\\datosx\\General.xlsx'
+rutaX=os.getcwd()+'\\datosx\\GeneralPostX.xlsx'
 diccionarioX=diccX()
 
 x=mainX(rutaX,diccionarioX)
 x.limpiar()
 porcentajePalabrasX=x.palabrasPorcentajes()
 
-rutaGuardarX=os.getcwd()+'\\datosx\\analisisX.xlsx'
+rutaGuardarX=os.getcwd()+'\\datosx\\analisisPostX.xlsx'
 
 porcentajeComentariosX=x.clasificacionYExportacion(rutaGuardarX)
 
@@ -31,14 +31,14 @@ print("COMENTARIOS "+str(porcentajeComentariosX))
 #claudia
 
 print("\n---------------------Claudia------------")
-rutaC=os.getcwd()+'\\datosC\\General.xlsx'
+rutaC=os.getcwd()+'\\datosC\\GeneralPostC.xlsx'
 diccionarioC=diccC()
 
 c=mainC(rutaC,diccionarioC)
 c.limpiar()
 porcentajePalabrasC=c.palabrasPorcentajes()
 
-rutaGuardarC=os.getcwd()+'\\datosC\\analisisC.xlsx'
+rutaGuardarC=os.getcwd()+'\\datosC\\analisisPostC.xlsx'
 
 porcentajeComentariosC=c.clasificacionYExportacion(rutaGuardarC)
 
